@@ -281,7 +281,9 @@ var VARK = {
                 } else {
                     console.log(firstName);
                     Cookies.set("first-name", firstName, { expires: 60 });
-                    window.location = "http://localhost:63342/learner/varkquiz.html";
+                    // window.location = "http://localhost:63342/learner/varkquiz.html";
+                    window.location = window.location.protocol + "//" + window.location.host + "/varkquiz.html";
+
                 }
 
             });
