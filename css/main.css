@@ -1,0 +1,11 @@
+.main-content, #main-content{
+    padding-top: 10px;
+}
+#main-content .row{
+    padding-bottom: 30px;
+}
+
+#vark-content .row{
+    padding-bottom: 15px;
+}
+
