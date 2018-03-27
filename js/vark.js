@@ -430,6 +430,10 @@ var VARK = {
             $("#modal-div").html(html);
             $("#vark-results-modal").modal("show");
 
+            $('#vark-results-modal').on('hidden.bs.modal', function () {
+                location.reload();
+            })
+
         },
 
         showVarkQuiz: function () {
