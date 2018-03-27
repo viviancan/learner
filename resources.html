@@ -10,72 +10,58 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Brand</a>
-        </div>
+    <div id="navbar"></div>
 
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Home</a></li>
+    <div class="container">
+        <div class="col-sm-10 col-sm-offset-1 main-content" id="resource-content">
+            <div class="row">
+                <h2><strong>Resources</strong></h2>
+            </div>
 
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                   aria-expanded="false">VARK <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="vark.html">VARK Information</a></li>
-                    <li><a href="varkquiz.html">Questionnaire</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
+            <div class="row">
+                <h4><strong>VARK</strong></h4>
+                <ul>
+                    <li><a href="http://vark-learn.com/wp-content/uploads/2014/08/The-VARK-Questionnaire.pdf"
+                           target="_blank">VARK Questionnaire (Version 7.8)</a></li>
+                    <li>Fleming, N.D. and Mills, C. (1992), Not Another Inventory, Rather a Catalyst for Reflection, To Improve the Academy, Vol. 11, 1992., page 137.</li>
                 </ul>
-            </li>
+            </div>
 
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="resources.html">Resources</a></li>
-        </ul>
-    </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+            <div class="row">
+                <h4><strong>Books</strong></h4>
+                <ul>
+                    <li>Krug, S. (2014). Don't make me think, revisited: A common sense approach to web usability(Third ed.). Berkeley, Calif.: New Riders.</li>
+                    <li>Nodder, C., & Books24x7, I. (2013). Evil by design: Interaction design to lead us into temptation (1st ed.). New York: John Wiley & Sons Inc.</li>
+                    <li>Norman, D., & Ebooks Corporation. (2013). The design of everyday things: Revised and expanded edition. New York: Basic Books.</li>
+                </ul>
+            </div>
 
-<div class="container">
-    <div class="col-sm-8 col-sm-offset-2 main-content" id="resource-content">
-        <div class="row">
-            <h2><strong>Resources</strong></h2>
+            <div class="row">
+                <h4><strong>Web Resources</strong></h4>
+                <ul>
+                    <li><a href="https://www.usability.gov/what-and-why/user-centered-design.html" target="_blank">Usability.gov</a></li>
+                    <li><a href="http://www.usabilityfirst.com/" target="_blank">Usability First</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <h4><strong>Articles</strong></h4>
+                <ul>
+                    <li>Abras, C., Maloney-Krichmar, D., & Preece, J. (2004). User-centered design. Bainbridge, W. Encyclopedia of Human-Computer Interaction. Thousand Oaks: Sage Publications, 37(4), 445-456.</li>
+                </ul>
+            </div>
         </div>
-
-        <div class="row">
-            <h4><strong>VARK</strong></h4>
-            <ul>
-                <a href="http://vark-learn.com/wp-content/uploads/2014/08/The-VARK-Questionnaire.pdf" target="_blank"><li>Questionnaire (Version 7.8)</li></a>
-            </ul>
-        </div>
-
-        <div class="row">
-            <h4><strong>Books</strong></h4>
-            <ul>
-                <li>Krug, S. (2014). Don't make me think, revisited: A common sense approach to web usability(Third ed.). Berkeley, Calif.: New Riders.</li>
-                <li>Nodder, C., & Books24x7, I. (2013). Evil by design: Interaction design to lead us into temptation (1st ed.). New York: John Wiley & Sons Inc.</li>
-                <li>Norman, D., & Ebooks Corporation. (2013). The design of everyday things: Revised and expanded edition. New York: Basic Books.</li>
-            </ul>
-        </div>
-
-
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        MAIN.init();
+    </script>
+
 
 
 </body>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VARK Questionnaire</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <div id="navbar">
+    </div>
+
+    <div class="container">
+        <div id="modal-div" style="z-index: 1080;"></div>
+
+        <div class="alert alert-success alert-dismissable" id="success-message" style="display: none;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </div>
+
+        <div class="alert alert-danger alert-dismissible" id="danger-message" style="display:none;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </div>
+
+        <div id="message"></div>
+
+        <div class="col-sm-8 col-sm-offset-2 main-content" id="what-is-ucd-content">
+            <div class="row">
+                <h2><strong>What is User Centered Design (UCD)?</strong></h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <figure>
+                        <img class="img-responsive" src="images/dont-make-me-think.png" alt="">
+                        <figcaption class="text-right"><small><i>Krug, S. (2014). Don't make me think, revisited: A common sense approach to web usability(Third ed.). Berkeley, Calif.: New Riders.</i></small></figcaption>
+                    </figure>
+                </div>
+
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+        </div> <!-- end of  content -->
+    </div> <!-- end of container -->
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+<script>
+    MAIN.init();
+</script>
+
+
+</body>
+</html>

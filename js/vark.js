@@ -34,6 +34,24 @@ var VARK = {
         if(preferredStyleIncluded || preferredStyle1Included){
             VARK.runtime.preferredStyle1Included = true;
             VARK.runtime.preferredStyleIncluded = true;
+
+            VARK.runtime.preferredStyle = preferredStyleIncluded;
+            VARK.runtime.preferredStyle1 = preferredStyle1Included;
+            VARK.runtime.preferredStyle2 = Cookies.get("preferredStyle2");
+            VARK.runtime.preferredStyle3 = Cookies.get("preferredStyle3");
+            VARK.runtime.preferredStyle4 = Cookies.get("preferredStyle4");
+            VARK.runtime.firstName = Cookies.get("first-name");
+
+
+            if(VARK.runtime.preferredStyle2 || VARK.runtime.preferredStyle3 || VARK.runtime.preferredStyle4){
+                VARK.runtime.moreThanOneStyle = true;
+            }
+
+            VARK.runtime.vScore = Cookies.get('Visual');
+            VARK.runtime.aScore = Cookies.get("Aural / Auditory");
+            VARK.runtime.rScore = Cookies.get("Read / Write");
+            VARK.runtime.kScore = Cookies.get("Kinesthetic");
+
             VARK.html.showVarkResults();
         } else {
             VARK.html.showVarkQuiz();
@@ -235,6 +253,59 @@ var VARK = {
             html+='</div>';
 
             html+='<div class="col-sm-9">';
+            html += '<div class="row">';
+            html += '<h4><strong>'+ VARK.runtime.firstName +', you are a '+ VARK.runtime.preferredStyle+' learner. </strong></h4>';
+            if(VARK.runtime.moreThanOneStyle){
+                html += " According to the VARK guide, <blockquote><p> ''those who do not have a standout mode with" +
+                    " one preference score well   above other scores, are defined as multimodal.<br><br>There are of two types. There are those who are flexible in their communication preferences and who switch from mode to mode depending on what they are working with. They are context specific. They choose a single mode to suit the occasion or situation. If they have to deal with legalities they will apply their Read/write preference. If they are to watch the demonstration of a technique they will be expressing their Kinesthetic preference. They are described as VARK Type One? in our database and they may have two, three or four almost-equal preferences in their VARK scores. There are others who are not satisfied until they have had input (or output) in all of their preferred modes. They take longer to gather information from each mode and, as a result, they often have a deeper and broader understanding. They may be seen as procrastinators or slow-deliverers but some may be merely gathering all the information before acting – and their decision making and learning may be better because of that breadth of understanding. They are described as VARK Type Two in our database.''</p></blockquote>";
+                html += '<a href="http://vark-learn.com/strategies/multimodal-strategies/" target="_blank"><p>Click here' +
+                    ' </a> to view more information about multimodal learning strategies</p>';
+            } else {
+                if(VARK.runtime.preferredStyle == "Visual"){
+                    html += " According to the VARK guide, <blockquote><p>'this preference includes the depiction of" +
+                        " information in maps, spider diagrams, charts, graphs, flow charts, labelled diagrams, and all the symbolic arrows, circles, hierarchies and other devices, that people use to represent what could have been presented in words. This mode could have been called Graphic (G) as that better explains what it covers. It does NOT include still pictures or photographs of reality, movies, videos or PowerPoint. It does include designs, whitespace, patterns, shapes and the different formats that are used to highlight and convey information. When a whiteboard is used to draw a diagram with meaningful symbols for the relationship between different things that will be helpful for those with a Visual preference. It must be more than mere words in boxes that would be helpful to those who have a Read/write preference.'</p></blockquote>";
+                    html += '<a href="http://vark-learn.com/strategies/visual-strategies/" target="_blank"><p>Click here' +
+                        ' </a> to view more information about visual learning strategies</p>';
+                } else if (VARK.runtime.preferredStyle == "Aural"){
+                    html += " According to the VARK guide, <blockquote><p>''this perceptual mode describes a" +
+                        " preference for information that is “heard or spoken.” Learners who have this as their main preference report that they learn best from lectures, group discussion, radio, email, using mobile phones, speaking, web-chat and talking things through. Email is included here because; although it is text and could be included in the Read/write category (below), it is often written in chat-style with abbreviations, colloquial terms, slang and non-formal language. The Aural preference includes talking out loud as well as talking to oneself. Often people with this preference want to sort things out by speaking first, rather than sorting out their ideas and then speaking. They may say again what has already been said, or ask an obvious and previously answered question. They have need to say it themselves and they learn through saying it – their way.''</p></blockquote>";
+                    html += '<a href="http://vark-learn.com/strategies/aural-strategies/" target="_blank"><p>Click here' +
+                        ' </a> to view more information about aural learning strategies</p>';
+                } else if(VARK.runtime.preferredStyle == "Kinesthetic"){
+                    html += " According to the VARK guide, <blockquote><p>''this preference is for information" +
+                        " displayed as words. Not surprisingly, many teachers and students have a strong preference for this mode. Being able to write well and read widely are attributes sought by employers of graduates. This preference emphasizes text-based input and output – reading and writing in all its forms but especially manuals, reports, essays and assignments. People who prefer this modality are often addicted to PowerPoint, the Internet, lists, diaries, dictionaries, thesauri, quotations and words, words, words… Note that most PowerPoint presentations and the Internet, GOOGLE and Wikipedia are essentially suited to those with this preference as there is seldom an auditory channel or a presentation that uses Visual symbols.''</p></blockquote>";
+                    html += '<a href="http://vark-learn.com/strategies/kinesthetic-strategies/" target="_blank"><p>Click here' +
+                        ' </a> to view more information about kinesthetic learning strategies</p>';
+                } else{
+                    html += " According to the VARK guide, <blockquote><p>''this preference is for information" +
+                        " displayed as words. Not surprisingly, many teachers and students have a strong preference for this mode. Being able to write well and read widely are attributes sought by employers of graduates. This preference emphasizes text-based input and output – reading and writing in all its forms but especially manuals, reports, essays and assignments. People who prefer this modality are often addicted to PowerPoint, the Internet, lists, diaries, dictionaries, thesauri, quotations and words, words, words… Note that most PowerPoint presentations and the Internet, GOOGLE and Wikipedia are essentially suited to those with this preference as there is seldom an auditory channel or a presentation that uses Visual symbols.''</p></blockquote>";
+                    html += '<a href="http://vark-learn.com/strategies/readwrite-strategies/" target="_blank"><p>Click here' +
+                        ' </a> to view more information about read/write learning strategies</p>';
+                }
+            }
+
+            html += '</div>';
+
+            html += '<div class="row">';
+            html += '<h4><strong>All of your results</strong></h4>';
+            html += '</div>';
+
+            html += '<div class="row">';
+            html += '<p><strong>(V) Visual: </strong>'+ VARK.runtime.vScore +'</p>';
+            html += '</div>';
+
+            html += '<div class="row">';
+            html += '<p><strong>(A) Aural / Auditory: </strong>'+ VARK.runtime.aScore +'</p>';
+            html += '</div>';
+
+            html += '<div class="row">';
+            html += '<p><strong>(R) Read / Write: </strong>'+ VARK.runtime.rScore +'</p>';
+            html += '</div>';
+
+            html += '<div class="row">';
+            html += '<p><strong>(K) Kinesthetic: </strong>'+ VARK.runtime.kScore +'</p>';
+            html += '</div>';
+
             html += '</div>';
 
             $("#vark-quiz-content").html(html);
