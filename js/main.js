@@ -59,7 +59,7 @@ var MAIN = {
         html += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UCD <span class="caret"></span></a>';
         html += '<ul class="dropdown-menu">';
         html += '<li><a href="what-is-ucd.html">What is UCD</a></li>';
-        html += '<li><a href="#">Something else here</a></li>';
+        html += '<li><a href="foundations.html">Foundations of LCD</a></li>';
         html += '<li role="separator" class="divider"></li>';
         html += '<li><a href="#">Separated link</a></li>';
         html += '</ul>';
