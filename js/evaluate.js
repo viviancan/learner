@@ -1,43 +1,41 @@
-var DESIGN = {
+var EVALUATE = {
     runtime: {
 
     },
 
     init: function () {
-        DESIGN.showBreadcrumbNavbar();
-        DESIGN.breadcrumbEvents();
+        EVALUATE.showBreadcrumbNavbar();
+        EVALUATE.breadcrumbEvents();
     },
 
     showBreadcrumbNavbar: function () {
         var html = "";
-        html += '<li id="bread-mood"><a href="design.html">Mood Board</a></li>';
-        html += '<li id="bread-wireframe"><a href="#">Wireframes</a></li>';
-        html += '<li id="bread-software"><a href="#">Software Resources</a></li>';
+        html += '<li id="bread-evaluate"><a href="evaluate.html">Evaluate</a></li>';
+        html += '<li id="bread-feedback"><a href="#">Feedback</a></li>';
         $("#design-bread").html(html);
     },
 
     breadcrumbEvents: function () {
-        $("#bread-mood").on("click", function () {
-
+        $("#bread-feedback").on("click", function () {
+            EVALUATE.html.feedback();
         });
-
-        $("#bread-wireframe").on("click", function () {
-            DESIGN.html.wireframe();
-        });
-
-        $("#bread-software").on("click", function () {
-            DESIGN.html.software();
-        });
-
-
     },
 
     html: {
-        wireframe: function () {
+        feedback: function () {
+            // html += '<div class="row row-bottom15">';
+            //
+            // html += '<div class="col-sm-6">';
+            // html += '<figure>';
+            // html += '<img class="img-responsive" src="images/sketchui.png" alt="">';
+            // html += '<figcaption class="text-left"><small><i>Sketch App Screenshot</i></small></figcaption>';
+            // html += '</figure>';
+            // html += '</div>';
+            //
             var html = "";
             html += '<div class="row">';
             html += '<div class="col-sm-12">';
-            html += '<h4 style="letter-spacing: 2px; margin-top: 0px;"><strong>Wireframing</strong></h4>';
+            html += '<h4 style="letter-spacing: 2px; margin-top: 0px;"><strong>Feedback</strong></h4>';
 
             html += '<p>Wireframes are a necessity during the design phase. Similar to a physical outline, they' +
                 ' provide a rough sketch of the flow of the site. There will usually be many iterations of' +

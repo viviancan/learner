@@ -60,9 +60,9 @@ var MAIN = {
         html += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UCD <span class="caret"></span></a>';
         html += '<ul class="dropdown-menu">';
         html += '<li><a href="what-is-ucd.html">What is UCD</a></li>';
-        html += '<li><a href="foundations.html">Foundations of UCD</a></li>';
-        html += '<li role="separator" class="divider"></li>';
-        html += '<li><a href="#">Separated link</a></li>';
+        html += '<li><a href="ucd-vs-lcd.html">UCD vs. LCD</a></li>';
+        // html += '<li role="separator" class="divider"></li>';
+        // html += '<li><a href="#">Separated link</a></li>';
         html += '</ul>';
         html += '</li>';
 
@@ -71,15 +71,25 @@ var MAIN = {
         html += '<ul class="dropdown-menu">';
         html += '<li><a href="foundations.html">Plan & Analyze</a></li>';
         html += '<li><a href="design.html">Design </a></li>';
-        html += '<li><a href="foundations.html">Deployment</a></li>';
-        html += '<li><a href="foundations.html">Evaluation & Feedback</a></li>';
+        html += '<li><a href="deployment.html">Deployment</a></li>';
+        html += '<li><a href="evaluate.html">Evaluation & Feedback</a></li>';
 
+        html += '</ul>';
+        html += '</li>';
+
+        html += '<li class="dropdown">';
+        html += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources<span class="caret"></span></a>';
+        html += '<ul class="dropdown-menu">';
+        html += '<li><a href="resources.html">References</a></li>';
+        html += '<li><a href="about.html">About Me</a></li>';
+        // html += '<li role="separator" class="divider"></li>';
+        // html += '<li><a href="#">Separated link</a></li>';
         html += '</ul>';
         html += '</li>';
 
         // html += '<li><a href="#">Link</a></li>';
         // html += '<li><a href="#">Link</a></li>';
-        html += '<li><a href="resources.html">Resources</a></li>';
+        // html += '<li><a href="resources.html">Resources</a></li>';
         html += '</ul>';
         html += '</div><!-- /.navbar-collapse -->';
         html += '</div><!-- /.container-fluid -->';

@@ -285,12 +285,11 @@ var FOUNDATIONS = {
             html += '<div class="col-sm-6">';
             html += '<h4><strong>Activity 1F</strong><br>';
             html += '<small>Please complete the questions before continuing.</small></h4>';
-            // html += '<ol>';
-            // html += '<li>Create a list of all potential users.</li>';
-            // html += '<li>For each user type, identify the following: ' +
-            //     '<ul><li>Age, gender, ethnicity</li> <li>Education</li> <li>Physical ability</li>' +
-            //     ' <li>General computer experience</li> <li>Relationship to You</li></ul></li>';
-            // html += '</ol>';
+            html += '<ol>';
+            html += '<li>Identify 3 measurable goals for your site</li>';
+            html += '<li>For Example: <ul><li>Set a deadline for site completion</li> <li>Determine the' +
+                ' type of feedback you hope to receive</li></ul></li>';
+            html += '</ol>';
             html += '</div>';
             html += '</div>';
 
