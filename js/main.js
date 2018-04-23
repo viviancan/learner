@@ -55,15 +55,28 @@ var MAIN = {
         html += '<li><a href="#">Separated link</a></li>';
         html += '</ul>';
         html += '</li>';
+
         html += '<li class="dropdown">';
         html += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UCD <span class="caret"></span></a>';
         html += '<ul class="dropdown-menu">';
         html += '<li><a href="what-is-ucd.html">What is UCD</a></li>';
-        html += '<li><a href="foundations.html">Foundations of LCD</a></li>';
+        html += '<li><a href="foundations.html">Foundations of UCD</a></li>';
         html += '<li role="separator" class="divider"></li>';
         html += '<li><a href="#">Separated link</a></li>';
         html += '</ul>';
         html += '</li>';
+
+        html += '<li class="dropdown">';
+        html += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Design Process<span class="caret"></span></a>';
+        html += '<ul class="dropdown-menu">';
+        html += '<li><a href="foundations.html">Plan & Analyze</a></li>';
+        html += '<li><a href="design.html">Design </a></li>';
+        html += '<li><a href="foundations.html">Deployment</a></li>';
+        html += '<li><a href="foundations.html">Evaluation & Feedback</a></li>';
+
+        html += '</ul>';
+        html += '</li>';
+
         // html += '<li><a href="#">Link</a></li>';
         // html += '<li><a href="#">Link</a></li>';
         html += '<li><a href="resources.html">Resources</a></li>';
