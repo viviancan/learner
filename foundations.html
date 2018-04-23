@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Foundations</title>
+    <title>UCD Design Process</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -12,7 +12,11 @@
 <div id="navbar">
 </div>
 
-<div>
+<div class="container">
+    <ol class="breadcrumb" style="background-color: transparent;" id="foundation-bread">
+    </ol>
+</div>
+
     <div id="modal-div" style="z-index: 1080;"></div>
 
     <div class="alert alert-success alert-dismissable" id="success-message" style="display: none;">
@@ -25,19 +29,19 @@
 
     <div id="message"></div>
 
-    <div class="col-sm-8 col-sm-offset-2 main-content" id="what-is-ucd-content">
+    <div class="col-sm-8 col-sm-offset-2 main-content" id="foundations-content">
         <div class="row">
-            <h2><strong>Foundations of UCD</strong></h2>
+            <h2><strong>UCD Design Process</strong></h2>
+            <h4>Stage 1: Planning & Analysis</h4>
         </div>
-        <div class="main-content">
+        <div class="main-content" id="foundations-main-content" style="margin-bottom: 100px">
             <div class="col-sm-12">
                 <div class="row">
-                    <h4 style="letter-spacing: 2px; margin-top: 0px;"><strong>(1) Early focus on users and
-                        tasks</strong></h4>
+                    <h4 style="letter-spacing: 2px; margin-top: 0px;"><strong>Planning</strong></h4>
                 </div>
             </div>
-            <div class="col-sm-6">
-               <div class="row">
+            <div class="row">
+               <div class="col-sm-6">
                    <p>Plan. Plan. Plan.</p>
                    <p>The first step in the UCD process is to <strong>plan. </strong>Since you will be designing a
                        site within the UCD framework, it is important to answer some questions, while always keeping
@@ -46,14 +50,24 @@
 
                    <p>As mentioned before, the follow along activity for this course will help you get started
                        designing a site for whatever you want. Maybe you need an updated classroom site, or are
-                       interesting in blogging, or want somewhere to showcase your work! The choice is yours. By the
+                       interested in blogging, or want somewhere to showcase your work! The choice is yours. By the
                    end of this course, you will have the beginnings of a great site built within the UCD framework.</p>
-
                </div>
 
-                <div class="row">
+                <div class="col-sm-6">
+                    <figure>
+                        <img class="img-responsive" src="images/plan.jpg" alt="">
+                        <figcaption class="text-right"><small><i>Photo by <a href="https://unsplash.com/photos/ZSPBhokqDMc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Med Badr Chemmaoui</a></i></small>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <hr>
+            <div class="row row-top15">
+                <div class="col-sm-8">
                     <h4><strong>Activity 1A</strong><br>
-                        <small>Please answer the questions before continuing.</small></h4>
+                        <small>Please complete the questions before continuing.</small></h4>
                     <ol>
                         <li>What is the purpose of your site?</li>
                         <li>What is the vision for your site?</li>
@@ -63,17 +77,8 @@
                 </div>
             </div>
 
-            <div class="col-sm-6">
-                <figure>
-                    <img class="img-responsive" src="images/user-experience.png" alt="">
-                    <figcaption
-                            class="text-right"><small><i>Art by <a href="http://www.clairemurray.co.uk/" target="_blank">Claire Murray</a></i></small></figcaption>
-                </figure>
-            </div>
-
         </div>
     </div> <!-- end of  content -->
-</div> <!-- end of container -->
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -82,8 +87,10 @@
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/main.js"></script>
+<script src="js/foundations.js"></script>
 <script>
     MAIN.init();
+    FOUNDATIONS.init();
 </script>
 
 
