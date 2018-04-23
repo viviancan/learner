@@ -46,13 +46,9 @@ var MAIN = {
         html += '<li><a href="vark.html">VARK Information</a></li>';
 
         if(preferredStyle || preferredStyle1){
-            console.log("exists");
             html += '<li><a href="varkquiz.html">VARK Results</a></li>';
         }
 
-        html += '<li><a href="#">Something else here</a></li>';
-        html += '<li role="separator" class="divider"></li>';
-        html += '<li><a href="#">Separated link</a></li>';
         html += '</ul>';
         html += '</li>';
 

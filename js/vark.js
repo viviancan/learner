@@ -45,7 +45,10 @@ var VARK = {
 
             if(VARK.runtime.preferredStyle2 || VARK.runtime.preferredStyle3 || VARK.runtime.preferredStyle4){
                 VARK.runtime.moreThanOneStyle = true;
+                console.log(  VARK.runtime.moreThanOneStyle);
             }
+
+
 
             VARK.runtime.vScore = Cookies.get('Visual');
             VARK.runtime.aScore = Cookies.get("Aural / Auditory");
@@ -65,9 +68,6 @@ var VARK = {
     showVarkInformationDiv: function () {
         var preferredStyleIncluded = Cookies.get('preferredStyle');
         var preferredStyle1Included = Cookies.get('preferredStyle1');
-
-        console.log(preferredStyleIncluded);
-        console.log(preferredStyle1Included);
 
         if(preferredStyleIncluded || preferredStyle1Included){
             console.log("this is true!!");
@@ -252,7 +252,13 @@ var VARK = {
 
             html+='<div>';
             html += '<div class="row">';
-            html += '<h4><strong>'+ VARK.runtime.firstName +', you are a '+ VARK.runtime.preferredStyle+' learner. </strong></h4>';
+            if(  VARK.runtime.moreThanOneStyle){
+                html += '<h4><strong>'+ VARK.runtime.firstName +', you are a Multimodal learner. </strong></h4>';
+
+            } else {
+                html += '<h4><strong>'+ VARK.runtime.firstName +', you are a '+ VARK.runtime.preferredStyle+' learner. </strong></h4>';
+
+            }
             if(VARK.runtime.moreThanOneStyle){
                 html += " According to the VARK guide, <blockquote><p> ''those who do not have a standout mode with" +
                     " one preference score well   above other scores, are defined as multimodal.<br><br>There are of two types. There are those who are flexible in their communication preferences and who switch from mode to mode depending on what they are working with. They are context specific. They choose a single mode to suit the occasion or situation. If they have to deal with legalities they will apply their Read/write preference. If they are to watch the demonstration of a technique they will be expressing their Kinesthetic preference. They are described as VARK Type One? in our database and they may have two, three or four almost-equal preferences in their VARK scores. There are others who are not satisfied until they have had input (or output) in all of their preferred modes. They take longer to gather information from each mode and, as a result, they often have a deeper and broader understanding. They may be seen as procrastinators or slow-deliverers but some may be merely gathering all the information before acting – and their decision making and learning may be better because of that breadth of understanding. They are described as VARK Type Two in our database.''</p></blockquote>";
