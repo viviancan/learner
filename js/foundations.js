@@ -10,7 +10,7 @@ var FOUNDATIONS = {
 
     showBreadcrumbNavbar: function () {
         var html = "";
-        html += '<li id="bread-plan"><a href="../foundations.html">Planning</a></li>';
+        html += '<li id="bread-plan"><a href="foundations.html">Planning</a></li>';
         html += '<li id="bread-evaluate"><a href="#">Evaluate Current Site</a></li>';
         html += '<li id="bread-analyze"><a href="#">Analyze Users</a></li>';
         html += '<li id="bread-task"><a href="#">Task Analysis</a></li>';
