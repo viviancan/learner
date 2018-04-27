@@ -136,24 +136,25 @@ var FOUNDATIONS = {
                     html += 'You are multi modal, check out strategies for the different modalities.';
                     html += 'Here\'s a Visual strategy: images, graphics, and diagrams will help you retain' +
                         ' more information!!';
-                }
-
-                if(FOUNDATIONS.runtime.preferredStyle == "Aural"){
-                    html += '<h4><strong>Aural Learning Strategy</strong><br>';
-                    html += 'Try discussing the main ideas with a classmate! This will help you retain more information!';
-
-                } else if(FOUNDATIONS.runtime.preferredStyle == "Kinesthetic" ){
-                    html += '<h4><strong>Kinesthetic Learning Strategy</strong><br>';
-                    html += 'You will benefit from writing, mapping, and diagramming! Motion will help reinforce the' +
-                        ' information!';
-
-                } else if(FOUNDATIONS.runtime.preferredStyle == "Visual") {
-                    html += '<h4><strong>Visual Learning Strategy</strong><br>';
-                    html += 'Images, graphics, and diagrams will help you retain more information!';
-
                 } else {
-                    html += '<h4><strong>Read/Write Learning Strategy</strong><br>';
-                    html += 'Try rewriting the main ideas in your own words!';
+
+                    if (FOUNDATIONS.runtime.preferredStyle == "Aural") {
+                        html += '<h4><strong>Aural Learning Strategy</strong><br>';
+                        html += 'Try discussing the main ideas with a classmate! This will help you retain more information!';
+
+                    } else if (FOUNDATIONS.runtime.preferredStyle == "Kinesthetic") {
+                        html += '<h4><strong>Kinesthetic Learning Strategy</strong><br>';
+                        html += 'You will benefit from writing, mapping, and diagramming! Motion will help reinforce the' +
+                            ' information!';
+
+                    } else if (FOUNDATIONS.runtime.preferredStyle == "Visual") {
+                        html += '<h4><strong>Visual Learning Strategy</strong><br>';
+                        html += 'Images, graphics, and diagrams will help you retain more information!';
+
+                    } else {
+                        html += '<h4><strong>Read/Write Learning Strategy</strong><br>';
+                        html += 'Try rewriting the main ideas in your own words!';
+                    }
                 }
 
                     html += '</div>';
@@ -314,24 +315,25 @@ var FOUNDATIONS = {
                     html += '<h4><strong>Multi Modal</strong><br>';
                     html += 'You are multi modal, check out strategies for the different modalities.';
                     html += 'Here\'s an aural strategy: Ask your instructor if you can record lessons. You can listen the audio when reviewing your notes.';
-                }
-
-                if(FOUNDATIONS.runtime.preferredStyle == "Aural"){
-                    html += '<h4><strong>Aural Learning Strategy</strong><br>';
-                    html += 'Ask your instructor if you can record lessons. You can listen the audio when reviewing' +
-                        ' your notes. ';
-
-                } else if(FOUNDATIONS.runtime.preferredStyle == "Kinesthetic" ){
-                    html += '<h4><strong>Kinesthetic Learning Strategy</strong><br>';
-                    html += 'It\'s a good idea to take frequent breaks and to change your seating environment!';
-
-                } else if(FOUNDATIONS.runtime.preferredStyle == "Visual") {
-                    html += '<h4><strong>Visual Learning Strategy</strong><br>';
-                    html += 'Try annotating your notes with purposeful doodles!';
-
                 } else {
-                    html += '<h4><strong>Read/Write Learning Strategy</strong><br>';
-                    html += 'Organize your notes into flow charts or diagrams!';
+
+                    if (FOUNDATIONS.runtime.preferredStyle == "Aural") {
+                        html += '<h4><strong>Aural Learning Strategy</strong><br>';
+                        html += 'Ask your instructor if you can record lessons. You can listen the audio when reviewing' +
+                            ' your notes. ';
+
+                    } else if (FOUNDATIONS.runtime.preferredStyle == "Kinesthetic") {
+                        html += '<h4><strong>Kinesthetic Learning Strategy</strong><br>';
+                        html += 'It\'s a good idea to take frequent breaks and to change your seating environment!';
+
+                    } else if (FOUNDATIONS.runtime.preferredStyle == "Visual") {
+                        html += '<h4><strong>Visual Learning Strategy</strong><br>';
+                        html += 'Try annotating your notes with purposeful doodles!';
+
+                    } else {
+                        html += '<h4><strong>Read/Write Learning Strategy</strong><br>';
+                        html += 'Organize your notes into flow charts or diagrams!';
+                    }
                 }
 
                 html += '</div>';
