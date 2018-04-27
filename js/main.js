@@ -78,8 +78,8 @@ var MAIN = {
         html += '<li class="dropdown">';
         html += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources<span class="caret"></span></a>';
         html += '<ul class="dropdown-menu">';
-        html += '<li><a href="resources.html">References</a></li>';
         html += '<li><a href="about.html">About Me</a></li>';
+        html += '<li><a href="resources.html">References</a></li>';
         // html += '<li role="separator" class="divider"></li>';
         // html += '<li><a href="#">Separated link</a></li>';
         html += '</ul>';
