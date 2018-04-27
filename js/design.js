@@ -1,9 +1,16 @@
 var DESIGN = {
     runtime: {
+        preferredStyle: '',
+        preferredStyle1: '',
+        firstName: ''
 
     },
 
     init: function () {
+        DESIGN.runtime.preferredStyle = MAIN.runtime.preferredStyle;
+        DESIGN.runtime.preferredStyle1 = MAIN.runtime.preferredStyle1;
+        DESIGN.runtime.firstName = MAIN.runtime.firstName;
+
         DESIGN.showBreadcrumbNavbar();
         DESIGN.breadcrumbEvents();
     },
@@ -18,7 +25,6 @@ var DESIGN = {
 
     breadcrumbEvents: function () {
         $("#bread-mood").on("click", function () {
-
         });
 
         $("#bread-wireframe").on("click", function () {
@@ -28,7 +34,6 @@ var DESIGN = {
         $("#bread-software").on("click", function () {
             DESIGN.html.software();
         });
-
 
     },
 
@@ -88,7 +93,7 @@ var DESIGN = {
             html += '<hr>';
 
             html += '<div class="row row-top15">';
-            html += '<div class="col-sm-6">';
+            html += '<div class="col-sm-8">';
             html += '<h4><strong>Activity 2A</strong><br>';
             html += '<small>Please complete the questions before continuing.</small></h4>';
             html += '<ol>';
@@ -97,6 +102,42 @@ var DESIGN = {
             html += '<li><a href="files/wireframe-4-grid.pdf" download>Downloadable Mini Browser Wireframe</a></li>';
             html += '</ol>';
             html += '</div>';
+
+            if(DESIGN.runtime.preferredStyle ){
+                html += '<div class="col-sm-4 text-right">';
+
+                if(DESIGN.runtime.preferredStyle1){
+                    html += '<h4><strong>Multi Modal</strong><br>';
+                    html += 'You are multi modal, check out strategies for the different modalities.';
+                    html += 'Here\'s a kinesthetic strategy: Students who are kinesthetic learners may enjoy active problem solving, treasure hunts, or role play';
+                }
+
+                if(DESIGN.runtime.preferredStyle == "Aural"){
+                    html += '<h4><strong>Aural Learning Strategy</strong><br>';
+                    html += 'Students who are aural learners may enjoy creating podcasts, participating in debates,' +
+                        ' or reading aloud. ';
+
+                } else if(DESIGN.runtime.preferredStyle == "Kinesthetic" ){
+                    html += '<h4><strong>Kinesthetic Learning Strategy</strong><br>';
+                    html += 'Students who are kinesthetic learners may enjoy active problem solving, treasure hunts,' +
+                        ' or role play.';
+
+                } else if(DESIGN.runtime.preferredStyle == "Visual") {
+                    html += '<h4><strong>Visual Learning Strategy</strong><br>';
+                    html += 'Students who are visual learners may enjoy painting/drawing, pictoral flash cards, or' +
+                        ' creating flip books!';
+
+                } else {
+                    html += '<h4><strong>Read/Write Learning Strategy</strong><br>';
+                    html += 'Students who are read/write learners may enjoy creating lists and may benefit from' +
+                        ' re-reading notes!';
+                }
+
+                html += '</div>';
+
+            }
+
+
             html += '</div>';
 
             html += '</div>';

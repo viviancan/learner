@@ -22,10 +22,8 @@ var VARK = {
     },
 
     init: function () {
-        console.log("main js initiatied");
 
         $('#get-started-btn').on("click", function () {
-            console.log("get-started-btn clicked");
         });
 
         var preferredStyleIncluded = Cookies.get('preferredStyle');
@@ -45,13 +43,12 @@ var VARK = {
 
             if(VARK.runtime.preferredStyle2 || VARK.runtime.preferredStyle3 || VARK.runtime.preferredStyle4){
                 VARK.runtime.moreThanOneStyle = true;
-                console.log(  VARK.runtime.moreThanOneStyle);
             }
 
 
 
             VARK.runtime.vScore = Cookies.get('Visual');
-            VARK.runtime.aScore = Cookies.get("Aural / Auditory");
+            VARK.runtime.aScore = Cookies.get("Aural");
             VARK.runtime.rScore = Cookies.get("Read / Write");
             VARK.runtime.kScore = Cookies.get("Kinesthetic");
 
@@ -70,7 +67,6 @@ var VARK = {
         var preferredStyle1Included = Cookies.get('preferredStyle1');
 
         if(preferredStyleIncluded || preferredStyle1Included){
-            console.log("this is true!!");
             VARK.runtime.preferredStyle1Included = true;
             VARK.runtime.preferredStyleIncluded = true;
         }
@@ -95,12 +91,10 @@ var VARK = {
     },
 
     calculateVarkResults:function () {
-        console.log("calculating vark results");
 
         var firstName = Cookies.get('first-name');
         if(firstName){
             VARK.runtime.firstName = firstName;
-            console.log(firstName);
         }
 
         VARK.clearVarkValuesAndCookies();
@@ -115,9 +109,6 @@ var VARK = {
         $("input:checkbox[name=vark]:checked").each(function(){
             resultsArray.push($(this).val());
         });
-
-        console.log(resultsArray);
-        console.log(resultsArray.length);
 
         if(resultsArray.length < 10){
             VARK.html.showErrorMessage("Please select 10 or more answers for accurate results");
@@ -146,12 +137,8 @@ var VARK = {
             VARK.runtime.rScore = rScore;
             VARK.runtime.kScore = kScore;
 
-            console.log("learning styles");
-            console.log(learningStyles);
-
             var highestScore = Math.max(vScore, aScore, kScore, rScore);
             VARK.runtime.highestScore = highestScore;
-            console.log("highest score " + highestScore);
 
             Object.keys(learningStyles).forEach(function eachKey(key) {
                 if (learningStyles[key] == highestScore) {
@@ -159,25 +146,19 @@ var VARK = {
                 }
             });
 
-            console.log(highestScoreArray);
-            console.log(highestScoreArray[0]);
-
             var preferredStyles = [];
 
             if (highestScoreArray.length > 1) {
-                console.log("more than one high score");
                 VARK.runtime.moreThanOneStyle = true;
                 for (var x = 0; x < highestScoreArray.length; x++) {
                     preferredStyles.push(highestScoreArray[x]);
                 }
             } else {
-                console.log("only one style");
                 preferredStyles.push(highestScoreArray[0]);
                 VARK.runtime.preferredStyle = highestScoreArray[0];
             }
 
             if (preferredStyles.length > 1) {
-                console.log("preffered style length greater than 1")
                 VARK.runtime.preferredStyleList = preferredStyles;
                 if (preferredStyles[0]) {
                     VARK.runtime.preferredStyle1 = preferredStyles[0];
@@ -194,8 +175,6 @@ var VARK = {
             } else {
                 VARK.runtime.preferredStyleList = preferredStyles;
                 VARK.runtime.preferredStyle = preferredStyles[0];
-                console.log("preferred style");
-                console.log(VARK.runtime.preferredStyle);
             }
 
             VARK.saveVarkCookie();
@@ -205,21 +184,13 @@ var VARK = {
     },
 
     saveVarkCookie: function () {
-        console.log("saving vark cookie");
         Cookies.set("Visual", VARK.runtime.vScore, { expires: 60 });
-        Cookies.set("Aural / Auditory", VARK.runtime.aScore, { expires: 60 });
+        Cookies.set("Aural", VARK.runtime.aScore, { expires: 60 });
         Cookies.set("Read / Write", VARK.runtime.rScore, { expires: 60 });
         Cookies.set("Kinesthetic", VARK.runtime.kScore, { expires: 60 });
 
-        console.log(VARK.runtime.moreThanOneStyle);
-        console.log(VARK.runtime.preferredStyle);
-        console.log(VARK.runtime.preferredStyle1);
-        console.log(VARK.runtime.preferredStyle2);
-        console.log(VARK.runtime.preferredStyle3);
-        console.log(VARK.runtime.preferredStyle4);
 
         if(VARK.runtime.moreThanOneStyle){
-            console.log("trying to save cookies for more than one style ");
             if(VARK.runtime.preferredStyle1) {
                 Cookies.set("preferredStyle1", VARK.runtime.preferredStyle1, { expires: 60 });
             }
@@ -356,15 +327,12 @@ var VARK = {
 
             $("#start-quiz-btn").on("click", function (e) {
                 e.preventDefault();
-                console.log("quiz button clicked");
                 var firstName = $("#first-name").val();
 
                 if(firstName == "" || !firstName){
-                    console.log("No first name");
                     $("#first-name").css({"background-color": "#ffe8e7"});
                     $("#error-name").show();
                 } else {
-                    console.log(firstName);
                     Cookies.set("first-name", firstName, { expires: 60 });
                     window.location = window.location.protocol + "//" + window.location.host + "/learner/varkquiz.html";
 
@@ -375,7 +343,6 @@ var VARK = {
         },
 
         showVarkResultsModal: function () {
-            console.log("showing vark results modal");
 
             var html = "";
 
@@ -964,7 +931,6 @@ var VARK = {
             $("#vark-quiz-content").html(html);
 
             $("#get-results-btn").on("click", function () {
-                console.log(" get results btn clicked");
                 VARK.calculateVarkResults();
             });
         },

@@ -23,37 +23,27 @@ var EVALUATE = {
 
     html: {
         feedback: function () {
-            // html += '<div class="row row-bottom15">';
-            //
-            // html += '<div class="col-sm-6">';
-            // html += '<figure>';
-            // html += '<img class="img-responsive" src="images/sketchui.png" alt="">';
-            // html += '<figcaption class="text-left"><small><i>Sketch App Screenshot</i></small></figcaption>';
-            // html += '</figure>';
-            // html += '</div>';
-            //
+
             var html = "";
             html += '<div class="row">';
-            html += '<div class="col-sm-12">';
+
+            html += '<div class="col-sm-6">';
             html += '<h4 style="letter-spacing: 2px; margin-top: 0px;"><strong>Feedback</strong></h4>';
-
-            html += '<p>Wireframes are a necessity during the design phase. Similar to a physical outline, they' +
-                ' provide a rough sketch of the flow of the site. There will usually be many iterations of' +
-                ' these sketches. You can make digital wireframes, using software like Balsamiq or Sketch, or old' +
-                ' fashioned pen and paper work just fine! <a href="files/samplewireframe.pdf" download>Here </a> are some wireframes my team completed for a project.' +
-                '</p>';
-            html += '</div>';
+            html += '<p>text here</p>';
             html += '</div>';
 
-            html += '<div class="row row-top15 row-bottom15 text-center">';
-
-            html += '<iframe width="560" height="315" src="https://www.youtube.com/embed/8-vTd7GRk-w"' +
-                ' frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
-            html += '<br><i><small>(UX Mastery, 2015)</small></i>';
-            html += '</div>';
+            html += '<div class="col-sm-4 col-sm-offset-1">';
+            html += '<figure>';
+            html += '<img class="img-responsive" src="images/feedback.png" alt="">';
+            html += '</figure>';
             html += '</div>';
 
-            $("#design-main-content").html(html);
+
+
+
+            html += '</div>';
+
+            $("#evaluate-main-content").html(html);
         },
         software: function () {
             var html = "";

@@ -1,7 +1,8 @@
 var MAIN = {
     runtime: {
         preferredStyle: '',
-        preferredStyle1: ''
+        preferredStyle1: '',
+        firstName: ''
 
     },
     init: function () {
@@ -11,13 +12,13 @@ var MAIN = {
     getCookies: function(){
         MAIN.runtime.preferredStyle = Cookies.get('preferredStyle');
         MAIN.runtime.preferredStyle1 = Cookies.get('preferredStyle1');
+        MAIN.runtime.firstName = Cookies.get("first-name");
         MAIN.updateNavbar();
 
     },
     updateNavbar:function () {
         if(MAIN.runtime.preferredStyle){
             var preferredStyle = MAIN.runtime.preferredStyle;
-            console.log("exists");
         }
 
         if(MAIN.runtime.preferredStyle1){
@@ -35,7 +36,8 @@ var MAIN = {
         html += '<span class="icon-bar"></span>';
         html += '<span class="icon-bar"></span>';
         html += '</button>';
-        html += '<a class="navbar-brand" href="#">Brand</a>';
+        html += '<a class="navbar-brand" href="index.html"><img style="height: 30px" src="images/website.svg"' +
+            ' alt=""></a>';
         html += '</div>';
         html += '<ul class="nav navbar-nav navbar-right">';
         html += '<li><a href="index.html">Home</a></li>';
