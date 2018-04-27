@@ -29,7 +29,20 @@ var EVALUATE = {
 
             html += '<div class="col-sm-6">';
             html += '<h4 style="letter-spacing: 2px; margin-top: 0px;"><strong>Feedback</strong></h4>';
-            html += '<p>text here</p>';
+            html += '<p>The Interaction Design Foundation suggests the <a href="https://www.interaction-design.org/literature/article/test-your-prototypes-how-to-gather-feedback-and-maximise-learning" target="_blank">following' +
+                ' tips</a> (Dam & Siang,' +
+                ' 2018) to gather' +
+                ' feedback:</p>';
+            html += '<ol>';
+            html += '<li>Solicit feedback from a variety of users using a variety of protoypes/mockups</li>';
+            html += '<li>Test on the right people</li>';
+            html += '<li>Ask the right questions</li>';
+            html += '<li>Be neutral when presenting ideas</li>';
+            html += '<li>Adapt while testing</li>';
+            html += '<li>Allow the user to contribute ideas</li>';
+            html += '</ol>';
+            html += '<p>Feedback is equally as important as all of the other phases. After all, this is <i>user' +
+                ' centered design.</i></p>';
             html += '</div>';
 
             html += '<div class="col-sm-4 col-sm-offset-1">';
@@ -38,10 +51,8 @@ var EVALUATE = {
             html += '</figure>';
             html += '</div>';
 
-
-
-
             html += '</div>';
+
 
             $("#evaluate-main-content").html(html);
         },
