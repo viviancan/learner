@@ -128,7 +128,7 @@ var FOUNDATIONS = {
             html += '</ol>';
             html += '</div>';
 
-            if(FOUNDATIONS.runtime.preferredStyle ){
+            if(FOUNDATIONS.runtime.preferredStyle || FOUNDATIONS.runtime.preferredStyle1){
                 html += '<div class="col-sm-4 text-right">';
 
                 if(FOUNDATIONS.runtime.preferredStyle1){
@@ -307,7 +307,7 @@ var FOUNDATIONS = {
             html += '</ol>';
             html += '</div>';
 
-            if(FOUNDATIONS.runtime.preferredStyle ){
+            if(FOUNDATIONS.runtime.preferredStyle || FOUNDATIONS.runtime.preferredStyle1 ){
                 html += '<div class="col-sm-4 text-right">';
 
                 if(FOUNDATIONS.runtime.preferredStyle1){

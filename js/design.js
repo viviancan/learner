@@ -103,7 +103,7 @@ var DESIGN = {
             html += '</ol>';
             html += '</div>';
 
-            if(DESIGN.runtime.preferredStyle ){
+            if(DESIGN.runtime.preferredStyle || FOUNDATIONS.runtime.preferredStyle1 ){
                 html += '<div class="col-sm-4 text-right">';
 
                 if(DESIGN.runtime.preferredStyle1){
